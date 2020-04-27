@@ -14,6 +14,7 @@ public class Main {
         System.out.println("ToPort");
         int ToPort = Integer.parseInt(input.nextLine());
         ServerSocket serverSocket = new ServerSocket(Port);
+        System.gc();
         while (true) {
                 Socket connection = serverSocket.accept();
                 System.out.println(connection.getRemoteSocketAddress().toString() + "已连接");
@@ -47,7 +48,7 @@ class ReMessage implements Runnable {
                     e.printStackTrace();
                 }
                 System.out.println();
-                System.gc();
+               
                return;
             }
         }
@@ -90,7 +91,7 @@ class ConnectTo implements Runnable{
                 connection.close();
             }
             catch (Exception e){}
-            System.gc();
+           
         }
     }
     public ConnectTo(String TOIP,int TOPort,Socket Connection){
