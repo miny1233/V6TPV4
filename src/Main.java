@@ -30,7 +30,7 @@ class ReMessage implements Runnable {
     InputStream inputStream;
     Socket socket,server;
     OutputStream outputStream;
-    byte[] bytes = new byte[1024*1024*8];
+    byte[] bytes = new byte[1024*512];
     String RemoteIP;
     @Override
     public void run() {
