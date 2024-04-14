@@ -1,1 +1,0 @@
-java -jar V6TPV4.jar
